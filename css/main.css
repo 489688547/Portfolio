@@ -1,6 +1,10 @@
-body {                                
+#bg {                                
     overflow: hidden;
-    position: fixed;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
     width:100%;
     height:100%;
     background: url(../img/bg.jpg) no-repeat;
@@ -8,17 +12,12 @@ body {
     z-index: -1;
 }
 
-a:hover {
-    text-decoration:none;
-    color: #00a2ff;
-}
-
-ul {
+.nav {
     display: flex;
     list-style:none;
 }
 
-li {
+.nav li {
     position: relative;
     padding: 20px;
     font-size: 22px;
@@ -28,35 +27,39 @@ li {
     cursor: pointer;
 }
 
-li::before {
+.nav li::before {
     content: "";
     position: absolute;
     top: 0;
     left: 100%;
     width: 0;
     height: 100%;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgb(252, 16, 73);
     transition: 0.2s all linear;
 }
 
-li:hover::before {
+.nav li:hover::before {
     width: 100%;
     top: 0;
     left: 0;
     transition-delay: 0.1s;
-    border-bottom-color: #fff;
+    border-bottom-color: rgb(252, 16, 73)f;
 }
 
-li:hover ~ li::before {
+.nav li:hover ~ li::before {
     left: 0;
 }
 
-li:active {
+.nav li:active {
     background: #fff;
 }
 
-li:hover {
-    color: aqua;
+.nav li:hover {
+    color: rgb(252, 16, 73);
+}
+
+a:hover {
+    text-decoration:none;
 }
 
 .intro {
@@ -65,4 +68,52 @@ li:hover {
     font-size: 37px;
     position: relative;
     top: 100px;
+}
+
+.black {
+    background-color: rgb(53, 52, 52);
+    height: 100px;
+    z-index: -1;
+}
+
+.ul-mv-left {
+    margin-left: -25px;
+}
+
+.img-pg {
+    width: 100%;
+    height: 268px;
+}
+
+.pg {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0;
+    display: block;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.discrip {
+    color: #8b8b8b;
+}
+
+.tech {
+    padding-left: 0px;
+    display: flex;
+    list-style:none;
+}
+
+.tech li {
+    background-color: rgb(252, 16, 73);
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+    padding: 4px 9px;
+    margin-right: 8px;
+}
+
+.fa-github {
+    color: black;
 }
