@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="/public/css/main.css" />
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8K16k-Ghrrq222LjsmNRgiAaNTzxxqEo&sensor=false"></script>
-    <script>
+    <script type="text/javascript">
         function initialize() {
             var myCenter = new google.maps.LatLng(49.261927, -122.887558);
             var mapProp = {
@@ -35,30 +35,32 @@
             h.style.height = "20px";
             h.style.height = (h.scrollHeight)+"px";
         }
+
     </script>
 </head>
 
 <body>
-    <nav class="row black">
-        <div class="container">
-            <div class="col-md-1">
-                <img src="/public/img/logo-w.png" class="logo">
-            </div>
-            <div class="col-md-3 col-md-offset-7">
-                <ul class="nav ul-mv-left">
-                    <a href="/">
-                        <li>Home</li>
-                    </a>
-                    <a href="/projects">
-                        <li>Projects</li>
-                    </a>
-                    <a href="/contact">
-                        <li>Contact</li>
-                    </a>
-                </ul>
+    <div class="black full-width">
+        <div class="row">
+            <div class="container">
+                <div class="col-md-1 col-sm-1 col-xs-1">
+                    <img src="/public/img/logo-w.png" class="logo">
+                </div>
+                <div class="navbar">
+                    <ul class="nav">
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="/projects">
+                            <li>Projects</li>
+                        </a>
+                        <a href="/contact"><li>Contact</li></a>
+                    </ul>
+                </div>
             </div>
         </div>
-    </nav>
+    </div>
+    
     <div id="googleMap" style="width:100%;height:450px;"></div>
     <div class="float"><p>I can work in NA :D</p></div>
     <div class="container">
@@ -79,16 +81,17 @@
             </div>
             <div class="col-md-6 form">
                 <form action="/contact" id="contact-form" method="post" role="form">
-                    <fieldset>
-                        <input id="name" name="name" type="text" placeholder="Your name" required="required">
-                        <input id="email" name="email" type="text" placeholder="Your email" required="required">
-                        <textarea id="message" name="message" placeholder="Enter your message here" rows="3" required="required" onkeyup="adjust_textarea(this)"></textarea>
-                        <button class="btn-contact" type="submit">Submit</button>
-                    </fieldset>
+                    <input id="name" name="name" type="text" placeholder="Your name" required="required">
+                    <input id="email" name="email" type="text" placeholder="Your email" required="required">
+                    <textarea id="message" name="message" placeholder="Enter your message here" rows="3" required="required" onkeyup="adjust_textarea(this)"></textarea>
+                    <button class="btn-contact" type="submit">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </body>
+
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </html>
