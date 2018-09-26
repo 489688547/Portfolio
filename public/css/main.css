@@ -1,4 +1,4 @@
-#bg {
+/* #bg {
     overflow: hidden;
     content: "";
     background: url(../img/bg.jpg) no-repeat center center fixed;;
@@ -71,11 +71,9 @@ a:hover {
 }
 
 .intro {
-    font-family: 'Indie Flower', cursive;
+    font-family: industry,"Open Sans",sans-serif;
     color: #fff;
     font-size: 37px;
-    position: relative;
-    top: 100px;
 }
 
 .black {
@@ -96,29 +94,54 @@ a:hover {
     padding: 50px 0;
     display: block;
     border: 1px solid #ccc;
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .discrip {
     color: #8b8b8b;
-}
+} */
+
 
 .tech {
-    padding-left: 0px;
-    display: flex;
-    list-style: none;
-}
-
-.tech li {
-    background-color: rgb(252, 16, 73);
+    display: inline-block;
+    border: 1px solid #F74F54;
+    color: #F74F54;
     font-size: 12px;
-    border-radius: 4px;
-    color: #fff;
-    padding: 4px 9px;
-    margin-right: 8px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
 }
 
-.fa-github {
+.project-info {
+    margin-top: 15px;
+}
+
+.project-info p {
+    font-weight:450;
+    line-height: 1.6;
+    margin: 10px 0px; 
+}
+
+.project-info a {
+    color:#F74F54;
+}
+
+.float {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    float: right;
+    background-color: #F74F54;
+    border-radius: 150px;
+    color:#fff;
+    font-size: 15px;
+    text-align: center;
+    width: 150px;
+    height: 35px; 
+}
+
+/* .fa-github {
     color: black;
 }
 
@@ -126,6 +149,21 @@ a:hover {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+}
+
+.avatar-lg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.move-down {
+    position: relative;
+    top:50px;
+}
+
+.row button {
+    display: flex;
 }
 
 .logo {
@@ -191,19 +229,6 @@ a:hover {
     height: 35px;
 }
 
-.float {
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    float: right;
-    background-color: rgb(252, 16, 73);
-    border-radius: 150px;
-    color:#fff;
-    font-size: 15px;
-    text-align: center;
-    width: 150px;
-    padding-top: 5px; 
-}
 
 @media screen and (max-width:992px){
     .form {
@@ -235,4 +260,4 @@ a:hover {
     .intro {
         font-size: 30px;
     }
-}
+} */

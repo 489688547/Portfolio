@@ -1,44 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Roger-Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/css/main.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roger | Full-Stack Developer </title>
+    <meta name="author" content="LionCoders" />
+    <link rel="icon" href="/public/img/logo.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/plugins.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/public/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/public/css/main.css" type="text/css" media="screen"  />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8K16k-Ghrrq222LjsmNRgiAaNTzxxqEo&sensor=false"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.2/dist/sweetalert2.all.min.js"></script>
 </head>
 
-<body id="bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-1 col-sm-1 col-xs-1">
-                <img src="/public/img/logo-w.png" class="logo">
-            </div>
-            <div class="navbar">
-                <ul class="nav">
-                    <a href="/">
-                        <li>Home</li>
-                    </a>
-                    <a href="/projects">
-                        <li>Projects</li>
-                    </a>
-                    <a href="/contact"><li>Contact</li></a>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-7 col-md-offset-3">
-                <p class="intro">
-                    Hello! My Name is Rongqing Zhou, and I'm a recent graduater.
-                    I have <b>HUGE</b> passion to learn and become a Front-End Developer.
-                </p>
-            </div>
-        </div>
+<body class="dark">
+    <div class="preloader">
+        <div class="anim pulse"><i class="ion-ios-bolt-outline"></i></div>
     </div>
-</body>
+    <div class="preloader-left"></div>
+    <div class="inline-menu-container">
+        <ul class="inline-menu">
+            <li class="about menu-item">About</li>
+            <li class="portfolio menu-item">Projects</li>
+            <li class="blog menu-item">Blog</li>
+            <li class="contact menu-item">Contact</li>
+            <li id="close" class="menu-item"><i class="ion-ios-close-empty"></i></li>
+        </ul>
+    </div>
+    <section class="home img-bg" style="background: url(/public/img/bg.jpg); background-size: cover;">
+        <div class="overlay light opacity5"></div>
+        <div class="container">
+            <div class="name-block">
+                <div class="name-block-container">
+                    <h1><span>Hi, I'm</span>Roger Zhou</h1>
+                    <h2>Junior Full-Stack Developer</h2>
+                    <a href="/public/Resume-Front-End.pdf" download class="btn btn-download">Download Resume</a>
+                </div>
+            </div>
+            <div class="menu-blocks">
+                <div class="about-block menu-block">
+                    <div class="about-block-container">
+                        <h2 class="about menu-item">About</h2>
+                    </div>
+                </div>
+                <div class="portfolio-block  menu-block">
+                    <div class="portfolio-block-container">
+                        <h2 class="portfolio menu-item">Projects</h2>
+                    </div>
+                </div>
+                <div class="blog-block  menu-block">
+                    <div class="blog-block-container">
+                        <h2 class="blog menu-item">Blog</h2>
+                    </div>
+                </div>
+                <div class="contact-block  menu-block">
+                    <div class="contact-block-container">
+                        <h2 class="contact menu-item">Contact</h2>
+                    </div>
+                </div>
+            </div>
 
-</html>
+            <!-- About page -->
+            <div class="content-blocks about">
+                <section class="content" id="about">
+                    <div class="block-content">
+                        <h3 class="block-title">Profile</h3>
+                        <h3 class="subheading">I'm a <strong>Junior Full-Stack Developer</strong> from Vancouver, Canada.  I aim to make a difference through my creative solution.</h3>
+                        <p>At front-end, I am proficident at HTML/CSS/JavaScript/jQuery and React/Redux. At back-end, I am good at NodeJS, express, MongoDB. 
+                         Besides that, I have knowledge of git/SVN, MySQL, TDD and Agile development.    
+                        </p>
+                    </div>
+                    <div class="block-content">
+                        <h3 class="block-title">Skills</h3>
+                        <label class="progress-bar-label">HTML&amp;CSS</label>
+                        <div class="progress">
+                            <div style="width: 85%;" class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                        <label class="progress-bar-label">JavaScript</label>
+                        <div class="progress">
+                            <div style="width: 70%;" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                        <label class="progress-bar-label">React/Redux</label>
+                        <div class="progress">
+                            <div style="width: 65%;" class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                        <label class="progress-bar-label">NodeJS</label>
+                        <div class="progress">
+                            <div style="width: 50%;" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                        <label class="progress-bar-label">MongoDB</label>
+                        <div class="progress">
+                            <div style="width: 50%;" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                <span>50%</span>
+                            </div>
+                        </div>
+                        <label class="progress-bar-label">Adobe Illustrator/Photoshop</label>
+                        <div class="progress">
+                            <div style="width: 30%;" class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                <span>30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="block-content">
+                        <h3 class="block-title">Education</h3>
+                        <div class="timeline education">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="exp-holder">
+                                        <div class="exp">
+                                            <div class="hgroup">
+                                                <h4>BSc in Computer Science And Math | <span>Simon Fraser University</span></h4>
+                                                <h5>May 2014 - Jun 2018</h5>
+                                            </div>
+                                        </div>
+                                        <div class="exp">
+                                            <div class="hgroup">
+                                                <h4>React Developer Nanodegree | <span>Udacity</span></h4>
+                                                <h5>Jan - June 2018</h5>
+                                            </div>
+                                            <p>Skilled learned: ES6, JSX, React, React-redux, React-native </p>
+                                        </div>
+                                        <div class="exp">
+                                            <div class="hgroup">
+                                                <h4>Full Stack Web Development Bootcamp | <span>WedDxd</span></h4>
+                                                <h5>Aug 2018 - Present</h5>
+                                            </div>
+                                            <p>Skills learned: JS, Jquery, NodeJS, Express, MongoDB, React </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </section>
+            </div>
+
+            <!-- projects page -->
+            <div class="content-blocks portfolio">
+                <section class="content">
+                    <div class="block-content">
+                        <h3 class="block-title">Portfolios</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- <div class="filters">
+                                    <span>Filters :</span>
+                                    <ul id="filters">
+                                        <li class="active" data-filter="*">All</li>
+                                        <li data-filter=".artwork">Art Work</li>
+                                        <li data-filter=".webdesign">Web Design</li>
+                                        <li data-filter=".design">Design</li>
+                                    </ul>
+                                </div> -->
+                                <div class="portfolio-container row isotope" id="portfolio-container">
+                                    <!-- Project 1 START -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 portfolio-item artwork row">
+                                        <div class="col-md-6">
+                                            <a class="open-project" href="http://18.220.21.191/">
+                                                <div class="portfolio-column">
+                                                    <div class="portfolio-hover">
+                                                        <div class="portfolio-content">
+                                                            <h2>Readable</h2>
+                                                            <hr>
+                                                            <p>View details.</p>
+                                                        </div>
+                                                        <div class="portfolio-overlay"></div>
+                                                    </div>
+                                                    <img src="/public/img/pg1.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="col-md-6 project-info">
+                                            <h2>Readable</h2>
+                                            <a href="https://github.com/489688547/Readable">
+                                                <i class="fab fa-github"></i>   https://github.com/489688547/Readable
+                                            </a>
+                                            <p class="discrip">A simple website to allow users post content by categories and comment on everyone's posts. 
+                                                Also, users can vote on posts and comments and sort posts by time and score.
+                                            </p>
+                                            
+                                            <span class="tech">React</span>
+                                            <span class="tech">React-redux</span>
+                                            <span class="tech">NodeJS</span>
+                                            <span class="tech">AWS</span>
+                                            
+                                        </div>     
+                                    </div>
+                                    <!-- Project 1 END -->
+                                    <!-- Project 2 START -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 portfolio-item artwork row">
+                                        <div class="col-md-6">
+                                            <a class="open-project" href="http://18.220.21.191/">
+                                                <div class="portfolio-column">
+                                                    <div class="portfolio-hover">
+                                                        <div class="portfolio-content">
+                                                            <h2>Workout The Hardway</h2>
+                                                            <hr>
+                                                            <p>View details.</p>
+                                                        </div>
+                                                        <div class="portfolio-overlay"></div>
+                                                    </div>
+                                                    <img src="/public/img/pg2.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="col-md-6 project-info">
+                                            <h2>Workout The Hardway</h2>
+                                            <a href="https://github.com/489688547/Readable">
+                                                <i class="far fa-file-powerpoint"></i>  https://drive.google.com/open?id=1QKFskJkhSFdaTsS08ykKLGc1bxv-kmbX
+                                            </a>
+                                            <p class="discrip">It is a web application that helps its users to customize their workout plans,
+                                                meet friends and share daily workout with others to experience a healthy life.
+                                            </p>
+                                            
+                                            <span class="tech">React</span>
+                                            <span class="tech">React-redux</span>
+                                            <span class="tech">NodeJS</span>
+                                            <span class="tech">AWS</span>
+                                            
+                                        </div>     
+                                    </div>
+                                    <!-- Project 2 END -->
+                                    <!-- Project 3 START -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 portfolio-item artwork row">
+                                        <div class="col-md-6">
+                                            <a class="open-project" href="https://warm-inlet-27339.herokuapp.com/">
+                                                <div class="portfolio-column">
+                                                    <div class="portfolio-hover">
+                                                        <div class="portfolio-content">
+                                                            <h2>Healthy Life</h2>
+                                                            <hr>
+                                                            <p>View details.</p>
+                                                        </div>
+                                                        <div class="portfolio-overlay"></div>
+                                                    </div>
+                                                    <img src="public/img/pg3.jpg" alt="">
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="col-md-6 project-info">
+                                            <h2>Healthy Life</h2>
+                                            <p class="discrip">A fitness website to help users schedule events on calender and 
+                                                calculate calories to reach their goals</p>
+                                            <span class="tech">Ruby on Rails</span>
+                                            <span class="tech">Facebook Login API</span>
+                                        </div>     
+                                    </div>
+                                    <!-- Project 3 END -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Blog Page -->
+            <div class="content-blocks blog">
+                <section class="content">
+                    <div class="block-content">
+                        <h3 class="block-title">My Blog</h3>
+                        <div class="row">
+                            <div class="col-md-10 mx-auto">
+                                <div class="post">
+                                    <div class="post-title">
+                                        <h1>They are polishing on the way.</h1>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- contact page -->
+            <div class="content-blocks contact">
+                <div class="col-md-12">
+                    <!--Google Map-->
+                    <div id="map">
+                        <div id="googleMap" style="width:100%;height:450px;"></div>
+                        <div class="float"><p>I can work in NA :D</p></div>
+                    </div>
+                    <!--Google Map End-->
+                </div>
+                
+                <section class="content">
+                    <div class="block-content">
+                        <h3 class="block-title">Get in touch</h3>
+                        <div class="row">
+                            <div class="col-md-6 contact-content">
+                                <form action="/" id="contact-form" method="post" role="form" id="contactForm" data-toggle="validator" class="contact-form shake">
+                                    <div class="form-group">
+                                        <input id="name" name="name" type="text" placeholder="Your name" required class="form-control" autocomplete="off" data-error="Please enter your name" >
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="email" name="email" type="text" placeholder="Your email" required class="form-control" autocomplete="off" data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="message" name="message" placeholder="Enter your message here" required class="form-control textarea" rows="8" data-error="Please enter your message subject" ></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button id="submit" type="submit" class="btn selected">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-md-5 offset-md-1">
+                                <div class="contact-content">
+                                    <div class="contact-icon">
+                                        <i class="ion-ios-location-outline"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>Address</h5>
+                                        <p>#709, 570 Emerson St, Coquitlam, V3J 0G3</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-content">
+                                    <div class="contact-icon">
+                                        <i class="ion-ios-email-outline"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>Email</h5>
+                                        <p>zhourongqing0518@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="contact-content">
+                                    <div class="contact-icon">
+                                        <i class="ion-social-github-outline"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h5>Github</h5>
+                                        <p> <a href="https://github.com/489688547"> https://github.com/489688547</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/public/js/plugins.min.js"></script>
+    <script src="/public/js/main.js"></script>
+</body>

@@ -1,3 +1,4 @@
+const swal = require('sweetalert2');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -10,15 +11,15 @@ app.use('/public', express.static(process.cwd() + '/public'));
 app.get('/', function (req,res) {
     res.sendFile(process.cwd() + '/public/index.html')
 });
-app.get('/projects', function (req,res) {
-    res.sendFile(process.cwd() + '/public/projects.html')
-});
+// app.get('/projects', function (req,res) {
+//     res.sendFile(process.cwd() + '/public/projects.html')
+// });
 app.get('/contact', function (req,res) {
     res.sendFile(process.cwd() + '/public/contact.html')
 });
 
 
-app.post('/contact', function (req, res) {
+app.post('/', function (req, res) {
   let mailOpts, smtpTrans;
   smtpTrans = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -38,10 +39,10 @@ app.post('/contact', function (req, res) {
   };
   smtpTrans.sendMail(mailOpts, function (error, response) {
     if (error) {
-      res.render('contact-failure');
+        console.log('send failure');
     }
     else {
-      res.render('contact-success');
+        console.log('send success');
     }
   });
 });
